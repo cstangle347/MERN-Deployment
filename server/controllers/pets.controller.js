@@ -2,7 +2,7 @@ const Pet = require('../models/pet.model');
 
 module.exports = {
   getAll(_,res){
-    Pet.find()
+    Pet.find().sort({type:1})
     .then(pets => res.json(pets));
   },
 
